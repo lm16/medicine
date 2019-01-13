@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head style="min-height: 100%">
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/easyui.css">
+    <link rel="stylesheet" href="css/icon.css">
+</head>
+<body style="min-height: 100%">
+
+    <div class="panel" style="height: 100%" data-options="fit:true,border:false">
+
+    <table id="dg" sytle="height:100%; width=100%"></table>
+
+
+    <div id="tb">
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newBean()">新增</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="editBean()">编辑</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroyBean()">删除</a>
+
+
+        <span style="margin-left: 10px">顾客姓名：</span>
+        <input id="itemid" style="line-height:26px;border:1px solid #ccc">
+        <a href="#" class="easyui-linkbutton" plain="true" onclick="doSearch()">查询</a>
+    </div>
+
+
+
+    <div id="dlg" class="easyui-dialog" style="width:400px" data-options="closed:true,modal:true,border:'thin',buttons:'#dlg-buttons'">
+        <form id="fm" method="post" novalidate style="margin:0;padding:20px 50px">
+            <h3>顾客信息</h3>
+            <div style="margin-bottom:10px">
+                <input name="cname" class="easyui-textbox" required="true" label="顾客姓名：" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="csex" class="easyui-textbox" required="true" label="顾客性别：" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="cage" class="easyui-textbox" required="true" label="顾客年龄" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="caddress" class="easyui-textbox" required="true" label="顾客地址：" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="cphone" class="easyui-textbox" required="true" label="顾客电话：" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="csymptom" class="easyui-textbox" required="true" label="顾客症状：" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="mno" class="easyui-textbox" required="true" label="药品编号：" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="ano" class="easyui-textbox" required="true" label="店员编号：" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="cdate" class="easyui-textbox" required="true" label="访店日期：" style="width:100%">
+            </div>
+            <div style="margin-bottom:10px">
+                <input name="cremark" class="easyui-textbox" required="true" label="顾客备注：" style="width:100%">
+            </div>
+        </form>
+    </div>
+    <div id="dlg-buttons">
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-ok" onclick="saveUser()" style="width:90px">保存</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')" style="width:90px">取消</a>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easyui.min.js"></script>
+<script src="js/client.js"></script>
+</body>
+</html>
